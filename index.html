@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>BEHAVIOR Vision Suite | Customizable Dataset Generation via Simulation</title>
+</head>
+<body>
+<!-- <div class="full-page-image">
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="assets/videos/teaser.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content" style="padding: 0 20px">
+        <h1>B<span style="font-variant-caps:all-small-caps;">EHAVIOR Vision Suite</span>: Customizable Dataset Generation via Simulation</h1>
+        <p><p>A set of tools and assets to generate fully customized synthetic data for systematic evaluation of computer vision models.</p>
+    </div>
+</div> -->
+
+<div id="title_slide">
+    <div class="title_left">
+        <h1>B<span style="font-variant-caps:all-small-caps;">EHAVIOR Vision Suite</span>: Customizable Dataset Generation via Simulation 
+            <!-- <br>by Learning
+            from Online Correction -->
+        </h1>
+        <div class="author-container">
+            <div class="author-name"><a href="https://gyhandy.github.io/" target="_blank">Yunhao Ge<sup>1,2,†</sup></a></div>
+            <div class="author-name"><a href="https://www.linkedin.com/in/yihetang/" target="_blank">Yihe Tang<sup>1,†</sup></a></div>
+            <div class="author-name"><a href="https://cnut1648.github.io/" target="_blank">Jiashu Xu<sup>3,†</sup></a></div>
+            <div class="author-name"><a href="https://www.cemgokmen.com/" target="_blank">Cem Gokmen<sup>1,†</sup></a></div>
+            <div class="author-name"><a href="https://www.chengshuli.me/" target="_blank">Chengshu Li<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://wensi-ai.github.io/" target="_blank">Wensi Ai<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://web.stanford.edu/~benjm/" target="_blank">Benjamin Jose Martinez<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://www.linkedin.com/in/arman-aydin-915035185/" target="_blank">Arman Aydin<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://www.linkedin.com/in/mona-anvari/" target="_blank">Mona Anvari<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://scholar.google.ca/citations?user=u4S8E4UAAAAJ&hl=en" target="_blank">Ayush K Chakravarthy<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://kovenyu.com/" target="_blank">Hong-Xing Yu<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://jdw.ong/" target="_blank">Josiah Wong<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://scholar.google.com/citations?user=sqTh_dwAAAAJ&hl=en" target="_blank">Sanjana Srivastava<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://scholar.google.com/citations?hl=en&user=jGwt3mcAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Sharon Lee<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://scholar.google.com/citations?user=QRvXHNsAAAAJ&hl=en" target="_blank">Shengxin Zha<sup>4</sup></a></div>
+            <div class="author-name"><a href="http://ilab.usc.edu/itti/" target="_blank">Laurent Itti<sup>2</sup></a></div>
+            <div class="author-name"><a href="https://yunzhuli.github.io/" target="_blank">Yunzhu Li<sup>1,7</sup></a></div>
+            <div class="author-name"><a href="https://robertomartinmartin.com/" target="_blank">Roberto Martín-Martín<sup>6</sup></a></div>
+            <div class="author-name"><a href="https://aptx4869lm.github.io/" target="_blank">Miao Liu<sup>4</sup></a></div>
+            <div class="author-name"><a href="https://pzzhang.github.io/pzzhang/" target="_blank">Pengchuan Zhang<sup>5</sup></a></div>
+            <div class="author-name"><a href="https://ai.stanford.edu/~zharu/" target="_blank">Ruohan Zhang<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://profiles.stanford.edu/fei-fei-li" target="_blank">Fei-Fei Li<sup>1</sup></a></div>
+            <div class="author-name"><a href="https://jiajunwu.com/" target="_blank">Jiajun Wu<sup>1</sup></a></div>
+        </div>
+        <div class="affiliation">
+            <p>
+                <sup>1</sup>Stanford University    
+                <sup>2</sup>University of Southern California
+                <sup>3</sup>Harvard University
+                <sup>4</sup>GenAI, Meta
+                <sup>5</sup>FAIR, Meta <br>
+                <sup>6</sup>The University of Texas at Austin
+                <sup>7</sup>The University of Illinois Urbana-Champaign
+                <p><sup>†</sup>Equal Contribution
+            </p>
+        </div>
+        <!-- <div class="affiliation">
+            <p><sup>†</sup>Stanford University <sup>&#8225;</sup>University of Southern California<br><img src="assets/logos/SUSig-red.png" style="height: 50px"></p>
+        </div> -->
+        <div class="button-container">
+            <a href="" target="_blank" class="button"><i class="ai ai-arxiv"></i>&emsp14;arXiv</a>
+            <a href="" target="_blank" class="button"><i class="fa-light fa-file"></i>&emsp14;PDF</a>
+            <a href="" target="_blank" class="button"><i class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr</a>
+            <a href="" target="_blank" class="button"><i class="fa-light fa-code"></i>&emsp14;Code</a>
+            <!-- <a href="" target="_blank" class="button"><i class="fa-light fa-face-smiling-hands"></i>&emsp14;Data</a>
+            <a href="" target="_blank" class="button"><i class="fa-light fa-robot-astromech"></i>&emsp14;Models</a> -->
+        </div>
+
+        <!-- <br> -->
+
+        <div class="allegrofail">
+            <div class="video_container">
+                <video loop autoplay muted playsinline preload="metadata">
+                    <source src="assets/videos/teaser.mp4" type="video/mp4">
+                </video>
+                <!-- <div class="caption">
+                    <p>
+                        Simulation policies are deployed where a human operator monitors the execution. The human intervenes
+                        and corrects through teleoperation when necessary. Such intervention and correction data are
+                        collected to learn <i>residual policies</i>. Finally, both residual policies and simulation policies
+                        are integrated during test time to achieve successful transfer.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <video autoplay muted playsinline loop preload="metadata" width="100%">
+                    <source src="assets/videos/pull/2-traverse-with-annotation.mp4" type="video/mp4">
+                </video>
+                <div class="text">Scene traversal with comprehensive annotations.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <video autoplay muted playsinline loop preload="metadata" width="100%">
+                    <source src="assets/videos/pull/1-scene-instance-augmentation.mp4" type="video/mp4">
+                </video>
+                <div class="text">Scene instance augmentation.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <video autoplay muted playsinline loop preload="metadata" width="100%">
+                    <source src="assets/videos/pull/3-parametric-model-evaluation.mp4" type="video/mp4">
+                </video>
+                <div class="text">Parateric model evaluation.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <video autoplay muted playsinline loop preload="metadata" width="100%">
+                    <source src="assets/videos/pull/4-object-relationship-prediction.mp4" type="video/mp4">
+                </video>
+                <div class="text">Object relationship prediction trained with generated data.</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <div id="abstract">
+            <h1>Abstract</h1>
+            <p>
+                The systematic evaluation and understanding of computer vision models under varying conditions require large amounts
+                 of data with comprehensive and customized labels, which real-world vision datasets rarely satisfy. 
+                 While current synthetic data generators offer a promising alternative, particularly for embodied AI tasks, 
+                 they often fall short for computer vision tasks due to low asset and rendering quality, limited diversity, 
+                 and unrealistic physical properties.
+                 BEHAVIOR Vision Suite supports a large number of adjustable parameters at the scene level (e.g., lighting, object placement), 
+                 the object level (e.g., joint configuration, attributes such as "filled" and "folded"), and the camera level 
+                 (e.g., field of view, focal length). Researchers can arbitrarily vary these parameters during data generation to 
+                 perform controlled experiments.
+                 We showcase three example application scenarios: systematically evaluating the robustness of models across different 
+                 continuous axes of domain shift, evaluating scene understanding models on the same set of images, and training and 
+                 evaluating simulation-to-real transfer for a novel vision task: unary and binary state prediction. 
+            </p>
+        </div>
+    </div>
+</div>
+<hr class="rounded">
+<div id="overview">
+    <h1>Overview</h1>
+    <p>
+        Overview of BEHAVIOR Vision Suite (BVS), our proposed toolkit for computer vision research. BVS builds upon the extended
+object assets and scene instances from BEHAVIOR-1K, and provides a customizable data generator that allows users to generate
+photorealistic, physically plausible labeled data in a controlled manner. We demonstrate BVS with three representative applications.
+    </p>
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/overview.png" style="width: 100%;">
+            <!-- <div class="caption" style="text-align: left">
+                <p>
+                    <b>Scalability with human correction data.</b> Numbers are success rates averaged over four tasks
+                    with different amount of human correction data.
+                </p>
+            </div> -->
+        </div>
+        <!-- <div class="video_container">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/method_overview.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    <b>(a)</b> Base policies are first trained in simulation through <i>action space distillation</i>
+                    with demonstrations generated by RL teacher policies. Base policies take point cloud as input to
+                    reduce perception gap. <b>(b)</b> After acquiring base policies, they are first deployed where a
+                    human operator monitors the execution. The human intervenes and corrects through teleoperation when
+                    necessary. Such intervention and correction data are collected to learn <i>residual policies</i>.
+                    Finally, both residual policies and base policies are integrated during test time to achieve
+                    successful transfer.
+                </p>
+            </div>
+        </div> -->
+    </div>
+
+    <h1>Extended BEHAVIOR-1K assets</h1>
+    <p>
+        Covering a wide range of object categories and scene types, our 3D assets have high visual and physical fidelity 
+        and rich annotations of semantic properties, allowing us to generate 1,000+ realistic scene configurations.
+    </p>
+    <div class="allegrofail">
+        <div class="video_container">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/extended-b1k.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="caption">
+                <p>
+                    Simulation policies are deployed where a human operator monitors the execution. The human intervenes
+                    and corrects through teleoperation when necessary. Such intervention and correction data are
+                    collected to learn <i>residual policies</i>. Finally, both residual policies and simulation policies
+                    are integrated during test time to achieve successful transfer.
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <h1>Scene Instance Augmentation</h1>
+    <p>
+        We enables the generation of diverse scene variations by altering furniture object models and incorporating additional everyday objects. 
+        Specifically, it can swap scene objects with alternative models from the same category, which are grouped based on visual and functional similarities. 
+        This randomization significantly varies scene appearances while maintaining layouts’ semantic integrity.
+    </p>
+    <div class="allegrofail">
+        <div class="video_container">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/scene-instance-agu.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="caption">
+                <p>
+                    Simulation policies are deployed where a human operator monitors the execution. The human intervenes
+                    and corrects through teleoperation when necessary. Such intervention and correction data are
+                    collected to learn <i>residual policies</i>. Finally, both residual policies and simulation policies
+                    are integrated during test time to achieve successful transfer.
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <h1>Application: Holistic Scene Understanding</h1>
+    <p>
+        One of the major advantages of synthetic datasets, including BVS, is that they offer various types of labels 
+        (segmentation masks, depth maps, and bounding boxes) for the same sets of input images. We believe that this 
+        feature can fuel the development of versatile vision models that can perform multiple perception tasks at the same time in the future.
+    </p>
+
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/holistic-scene-understanding.png" style="width: 100%;">
+            <!-- <div class="caption" style="text-align: left">
+                <p>
+                    <b>Scalability with human correction data.</b> Numbers are success rates averaged over four tasks
+                    with different amount of human correction data.
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="allegrofail">
+        <div class="video_container">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/traverse-video.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Holistic Scene Understanding Dataset. We generated extensive traversal videos across representative scenes, 
+                    each with 10+ camera trajectories.For each image, BVS generates various labels (e.g., scene graphs, segmentation masks, depth).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Application: Parametric Model Evaluation</h1>
+
+    <p>
+        Parametric model evaluation is essential for developing and understanding perception models, enabling a systematic assessment of performance robustness against various domain shifts. 
+        Leveraging the flexibility of the simulator, our generator extends parametric evaluation to more diverse axes, including scene, camera, and object state changes.
+    </p>
+    <div class="allegrofail">
+        <div class="video_container">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/parametric-1.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Parametric Model Evaluation - Articulation.
+                </p>
+            </div>
+
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/parametric-2.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Parametric Model Evaluation - Visibility.
+                </p>
+            </div>
+
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/parametric-3.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Parametric Model Evaluation - Lighting.
+                </p>
+            </div>
+
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/parametric-4.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Parametric Model Evaluation - Zoom.
+                </p>
+            </div>
+
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/parametric-5.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Parametric Model Evaluation - Pitch.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Application: Object States and Relations Prediction</h1>
+
+    <p>
+        Users can also leverage BVS to generate training data with specific object configurations that are difficult 
+        to accumulate or annotate in the real world. We illustrates BVS’s practical application in synthesizing
+a dataset that facilitates the training of a vision model capable of zero-shot transfer to real-world images on the task
+of object relationship prediction.
+    </p>
+
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/relationship.png" style="width: 80%;">
+            <!-- <div class="caption" style="text-align: left">
+                <p>
+                    <b>Scalability with human correction data.</b> Numbers are success rates averaged over four tasks
+                    with different amount of human correction data.
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="allegrofail">
+        <div class="video_container"style="text-align: center">
+            <video loop autoplay muted playsinline preload="metadata">
+                <source src="assets/videos/predicate_prediction.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p>
+                    Object relationship prediction model trained with BVS generated data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!--     
+    <h1>Experiments</h1>
+    <p>We seek to answer the following research questions with our experiments:</p>
+    <details>
+        <summary>Research Questions</summary>
+        <p>
+            <i>Q1</i>: Does T<span style="font-variant-caps:all-small-caps;">RANSIC</span> lead to better transfer
+            performance compared to traditional sim-to-real methods?
+            <br>
+            <i>Q2</i>: Can T<span style="font-variant-caps:all-small-caps;">RANSIC</span> better integrate human
+            correction into the policy learned in simulation than existing interactive imitation learning (IL)
+            approaches?
+            <br>
+            <i>Q3</i>: Does T<span style="font-variant-caps:all-small-caps;">RANSIC</span> require less real-world data
+            to achieve good performance compared to algorithms that only learn from real-robot trajectories?
+            <br>
+            <i>Q4</i>: How effective can T<span style="font-variant-caps:all-small-caps;">RANSIC</span> address
+            different types of sim-to-real gaps?
+            <br>
+            <i>Q5</i>: How does T<span style="font-variant-caps:all-small-caps;">RANSIC</span> scale with human effort?
+            <br>
+            <i>Q6</i>: Does T<span style="font-variant-caps:all-small-caps;">RANSIC</span> exhibit intriguing
+            properties, such as generalization to unseen objects, effective gating, policy robustness, consistency in
+            learned visual features, ability to solve long-horizon manipulation tasks, and other emergent behaviors?
+
+        </p>
+    </details>
+    <p>
+        We consider complex contact-rich manipulation tasks in FurnitureBench that require high precision. Specifically,
+        we divide the assembly of a square table into four independent tasks: <i>Stabilize</i>, <i>Reach and Grasp</i>,
+        <i>Insert</i>, and <i>Screw</i>.
+    </p>
+
+    <div class="allegrofail">
+        <div class="video_container">
+            <img src="assets/img/experiment_main.png">
+            <div class="caption">
+                <p>
+                    <b>Average success rates over four benchmarked tasks.</b> T<span
+                        style="font-variant-caps:all-small-caps;">RANSIC</span> significantly outperforms three baseline
+                    groups. They are 1) traditional sim-to-real approaches, such as domain randomization and data
+                    augmentation (“DR. & Data Aug.”) and real-world fine-tuning; 2) interactive imitation learning
+                    methods, such as HG-Dagger and IWR; and 3) approaches that only train on real-robot data, such as
+                    BC, BC-RNN, and IQL. Results are success rates averaged over four tasks. Each evaluation consists of
+                    20 trials with different initial settings. We make our best efforts to ensure the same initial
+                    configuration when evaluating different methods.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="allegrofail">
+        <div class="video_container">
+            <img src="assets/img/experiment_main_table.png">
+            <div class="caption">
+                <p>
+                    <b>Success rates per tasks.</b> T<span style="font-variant-caps:all-small-caps;">RANSIC</span>
+                    outperforms all baseline methods on all four tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        We show that in sim-to-real transfer, a good base policy learned from the simulation can be combined with
+        limited real-world data to achieve success (<abbr
+            title="Does TRANSIC require less real-world data to achieve good performance compared to algorithms that only learn from real-robot trajectories?"><dfn>Q3</dfn></abbr>).
+        However, effectively utilizing human correction data to address the sim-to-real gap is challenging (<abbr
+            title="Does TRANSIC lead to better transfer performance compared to traditional sim-to-real methods?"><dfn>Q1</dfn></abbr>),
+        especially when we want to prevent catastrophic forgetting of the base policy (<abbr
+            title="Can TRANSIC better integrate human correction into the policy learned in simulation than existing interactive imitation learning (IL) approaches?"><dfn>Q2</dfn></abbr>).
+    </p>
+
+    <h1>Effectiveness in Addressing Different Sim-to-Real Gaps (<abbr
+            title="How effective can TRANSIC address different types of sim-to-real gaps?"><dfn>Q4</dfn></abbr>)</h1>
+    <p>
+        While T<span style="font-variant-caps:all-small-caps;">RANSIC</span> is a holistic approach to address multiple
+        sim-to-real gaps simultaneously, we shed light on its ability to close each individual gap. To do so, we create
+        five different simulation-reality pairs. For each of them, we intentionally create large gaps between the
+        simulation and the real world. These gaps are applied to the real-world setting and they include <i>perception
+        error</i>, <i>underactuated controller</i>, <i>embodiment mismatch</i>, <i>dynamics difference</i>, and <i>object
+        asset mismatch</i>.
+    </p>
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/experiment_different_sim2real_gaps.png" style="width: 60%;">
+            <div class="caption" style="text-align: left">
+                <p>
+                    <b>Robustness to different sim-to-real gaps.</b> Numbers are averaged success rates (%). Polar bars
+                    represent performances after training with data collected specifically to address a particular gap.
+                    Dashed lines are zero-shot performances. Shaded circles show average performances across five pairs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        T<span style="font-variant-caps:all-small-caps;">RANSIC</span> achieves an average success rate of 77% across
+        five different simulation-reality pairs with deliberately exacerbated sim-to-real gaps. This indicates its
+        remarkable ability to close these individual gaps. In contrast, the best baseline method, IWR, only achieves an
+        average success rate of 18%. We attribute this effectiveness in addressing different sim-to-real gaps to the
+        residual policy design.
+    </p>
+
+
+    <h1>Scalability with Human Effort (<abbr title="How does TRANSIC scale with human effort?"><dfn>Q5</dfn></abbr>)
+    </h1>
+    <p>
+        Scaling with human effort is a desired property for human-in-the-loop robot learning methods. We show that
+        T<span style="font-variant-caps:all-small-caps;">RANSIC</span> has better human data scalability than the best
+        baseline IWR. If we increase the size of the correction dataset from 25% to 75% of the full dataset size, T<span
+            style="font-variant-caps:all-small-caps;">RANSIC</span> achieves a relative improvement of 42% in the
+        average success rate. In contrast, IWR only achieves 23% relative improvement. Additionally, IWR performance
+        plateaus at an early stage and even starts to decrease as more human data becomes available. We hypothesize that
+        IWR suffers from catastrophic forgetting and struggles to properly model the behavioral modes of humans and
+        trained robots. On the other hand, T<span style="font-variant-caps:all-small-caps;">RANSIC</span> bypasses these
+        issues by learning gated residual policies only from human correction.
+    </p>
+
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/experiment_data_scalability.png" style="width: 50%;">
+            <div class="caption" style="text-align: left">
+                <p>
+                    <b>Scalability with human correction data.</b> Numbers are success rates averaged over four tasks
+                    with different amount of human correction data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Intriguing Properties and Emergent Behaviors (<abbr
+            title="Does TRANSIC exhibit intriguing properties, such as generalization to unseen objects, effective gating, policy robustness, consistency in learned visual features, ability to solve long-horizon manipulation tasks, and other emergent behaviors?"><dfn>Q6</dfn></abbr>)
+    </h1>
+
+    <p>
+        We further examine T<span style="font-variant-caps:all-small-caps;">RANSIC</span> and discuss several emergent
+        capabilities. We show that 1) T<span style="font-variant-caps:all-small-caps;">RANSIC</span> has learned
+        re-usable skills for category-level object generalization; 2) T<span style="font-variant-caps:all-small-caps;">RANSIC</span>
+        can reliably operate in a fully autonomous setting once the gating mechanism is learned; 3) T<span
+            style="font-variant-caps:all-small-caps;">RANSIC</span> is robust against partial point cloud observations
+        and suboptimal correction data; and 4) T<span style="font-variant-caps:all-small-caps;">RANSIC</span> learns
+        consistent visual features between the simulation and reality.
+    </p>
+
+    <div class="allegrofail">
+        <div class="video_container" style="text-align: center">
+            <img src="assets/img/experiment_ablation.png" style="width: 100%;">
+            <div class="caption" style="text-align: left">
+                <p>
+                    <b>Intriguing properties and emergent behaviors of T<span style="font-variant-caps:all-small-caps;">RANSIC</span>.</b>
+                    <b>Left:</b> Generalization to unseen objects from a new category. <b>Right:</b> The effects of
+                    different gating mechanisms (learned gating vs human gating), policy robustness against reduced
+                    cameras and suboptimal correction data, and the importance of visual encoder regularization.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h1> Failure Cases </h1>
+    <div class="allegroupper">
+        <video autoplay muted playsinline loop preload="metadata">
+            <source src="assets/videos/insert_failure.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted playsinline loop preload="metadata">
+            <source src="assets/videos/bended_gripper.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="allegrolower">
+        <div class="video_container">
+            <video autoplay muted playsinline loop preload="metadata">
+                <source src="assets/videos/unstable_grasp_pose.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <p><b>Several failure cases.</b> For instances, they include inaccurate insertion, bended gripper,
+                    unstable grasping pose, and over-screwing.</p>
+            </div>
+        </div>
+        <div class="video_container">
+            <video autoplay muted playsinline loop preload="metadata">
+                <source src="assets/videos/over_screw.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div> -->
+
+    <h1>Conclusion</h1>
+    <p>
+        We have introduced the BEHAVIOR Vision Suite (BVS), a novel toolkit designed for the systematic evaluation and comprehensive understanding of computer vision models. 
+        BVS enables researchers to control a wide range of parameters across scene, object, and camera levels, facilitating the creation of highly customized datasets.
+        Our experiments highlight BVS's versatility and efficacy through three key applications. 
+        First, we show its ability to evaluate model robustness against various domain shifts, 
+        underscoring its value in systematically assessing model performance under challenging conditions. 
+        Second, we present comprehensive benchmarking of scene understanding models on a unified dataset, 
+        illustrating the potential for developing multi-task models using a single BVS dataset. 
+        Lastly, we investigate BVS's role in facilitating sim2real transfer for novel vision tasks, including object states and relations prediction.
+        BVS highlights synthetic data's promise in advancing the field, offering researchers the means to generate high-quality, 
+        diverse, and realistic datasets tailored to specific needs. 
+    </p>
+
+    <h1>Acknowledgement</h1>
+    <p>
+        We are grateful to SVL members for their helpful feedback and insightful discussions. The work is in part supported by the Stanford Institute for Human-Centered AI (HAI), 
+        NSF CCRI #2120095, RI #2338203, ONR MURI N00014-22-1-2740, N00014-21-1-2801, Amazon, Amazon ML Fellowship, and Nvidia.
+    </p>
+
+    <h1>BibTeX</h1>
+    <p class="bibtex">tbd
+    </p>
+    <br>
+</div>
+</body>
+
+<script src="assets/js/full_screen_video.js"></script>
+<script src="assets/js/carousel.js"></script>
+</html>
