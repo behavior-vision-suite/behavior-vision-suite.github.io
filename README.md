@@ -39,7 +39,7 @@
 </div>
 <br/>
 <div align="center">
-    <span>CVPR 2024&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span>CVPR 2024 (Highlight)&nbsp;&nbsp;&nbsp;&nbsp;</span>
     <span><a href="https://behavior-vision-suite.github.io/">Project Page</a></span>
 </div>
 
