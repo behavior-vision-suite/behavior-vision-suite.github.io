@@ -158,5 +158,12 @@ https://github.com/behavior-vision-suite/behavior-vision-suite.github.io/assets/
 
 # Citation
 If you find our project helpful, please cite our paper:
-```bibtex
+```
+@inproceedings{ge2024behavior,
+  title={BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation},
+  author={Ge, Yunhao and Tang, Yihe and Xu, Jiashu and Gokmen, Cem and Li, Chengshu and Ai, Wensi and Martinez, Benjamin Jose and Aydin, Arman and Anvari, Mona and Chakravarthy, Ayush K and others},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={22401--22412},
+  year={2024}
+}
 ```
